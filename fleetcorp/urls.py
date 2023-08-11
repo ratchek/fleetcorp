@@ -1,3 +1,6 @@
+from django.urls import include
+from django.views.generic import RedirectView
+
 """
 URL configuration for fleetcorp project.
 
@@ -19,4 +22,6 @@ from django.urls import path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("vehicles/", include("vehicles.urls")),
+    path("", RedirectView.as_view(url="vehicles/", permanent=True)),
 ]
