@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>FleetCorp Home</h1>
+    <p>
+        Welcome to FleetCorp, a website developed by
+        <em>meeee</em>!
+    </p>
+    <h2>Dynamic content</h2>
+    <p>The library has the following record counts:</p>
+    <ul>
+        <li><strong>Vehicles:</strong> {{ num_vehicles }}</li>
+        <li><strong>Registrations:</strong> {{ num_registrations }}</li>
+        <li><strong>Number of cars registered in NY:</strong> {{ num_ny_vehicles }}</li>
+    </ul>
+{% endblock %}
